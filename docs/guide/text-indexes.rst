@@ -15,9 +15,10 @@ Use the *$* prefix to set a text index, Look the declaration::
       is_active = BooleanField()
 
       meta = {'indexes': [
-          {'fields': ['$title', "$content"],
-           'default_language': 'english',
-           'weight': {'title': 10, 'content': 2}
+          {
+            'fields': ['title', 'content'],
+            'default_language': 'english',
+            'weight': {'title': 10, 'content': 2}
           }
       ]}
 
